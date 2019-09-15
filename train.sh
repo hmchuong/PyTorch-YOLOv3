@@ -1,0 +1,1 @@
+python train.py --model_def config/yolov3-camt5.cfg --data_config config/camt5.data

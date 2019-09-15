@@ -10,3 +10,6 @@ backup
 weights/*.weights
 __pycache__
 checkpoints
+data/camt5/*
+data/camt5.zip
+weights/darknet*

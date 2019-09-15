@@ -1,0 +1,4 @@
+classes= 1
+train=data/camt5/train.txt
+valid=data/camt5/valid.txt
+names=data/camt5/classes.names
