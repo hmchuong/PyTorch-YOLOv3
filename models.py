@@ -260,6 +260,7 @@ class Darknet(nn.Module):
                 x, layer_loss = module[0](x, targets, img_dim)
                 loss += layer_loss
                 yolo_outputs.append(x)
+            print(x.shape)
             layer_outputs.append(x)
         yolo_outputs = to_cpu(torch.cat(yolo_outputs, 1))
         return yolo_outputs if targets is None else (loss, yolo_outputs)

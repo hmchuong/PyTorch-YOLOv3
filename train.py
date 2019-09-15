@@ -61,8 +61,10 @@ if __name__ == "__main__":
     if opt.pretrained_weights:
         if opt.pretrained_weights.endswith(".pth"):
             model.load_state_dict(torch.load(opt.pretrained_weights))
+            print("Loaded weight")
         else:
             model.load_darknet_weights(opt.pretrained_weights)
+            print("Loaded darknet weights")
     model = nn.DataParallel(model)
     # Get dataloader
     dataset = ListDataset(train_path, augment=True, multiscale=opt.multiscale_training)
