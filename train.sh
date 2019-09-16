@@ -1,1 +1,1 @@
-python train.py --model_def config/yolov3-camt5.cfg --data_config config/camt5.data --n_cpu 70 --pretrained_weights weights/darknet53.conv.74
+python train.py --model_def config/yolov3-camt5-new.cfg --data_config config/camt5.data --n_cpu 70 --pretrained_weights weights/yolov3.weights
