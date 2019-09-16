@@ -189,6 +189,7 @@ class YOLOLayer(nn.Module):
             )
             
             # Loss : Mask outputs to ignore non-existing objects (except with conf. loss)
+            obj_mask = obj_mask.type(torch.bool)
             loss_x = self.mse_loss(x[obj_mask], tx[obj_mask])
             return None
             loss_y = self.mse_loss(y[obj_mask], ty[obj_mask])
